@@ -2,10 +2,10 @@
 
 class Conn
 {
-    public $host = "localhost";
-    public $user = "root";
-    public $pass = "";
-    public $dbname = "celke";
+    public $host = "db-mysql-testes.c5rwuxpdslhl.sa-east-1.rds.amazonaws.com";
+    public $user = "admin"; //"root";
+    public $pass = "aletheia2006";
+    public $dbname = "db-mysql-testes";
     public $port = 3306;
     public $connect = null;
 
@@ -17,7 +17,7 @@ class Conn
             //Conexao sem a porta
             $this->connect = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->dbname, $this->user, $this->pass);
 
-            //echo "Conexão realizada com sucesso!";
+            echo "Conexão realizada com sucesso!";
             return $this->connect;
         } catch (Exception $err){
             echo "Erro: Conexão não realizada com sucesso! Erro gerado: " . $err;
