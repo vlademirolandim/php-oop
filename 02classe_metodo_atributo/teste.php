@@ -25,7 +25,13 @@ class Conn
             return false;
         }
     }
+
+    public function exec( $sql ){
+        $this->connect->exec( $sql );
+    }
+
 }
 
 $conn = new Conn();
 $conn->conectar();
+$conn->exec( file_get_contents( "celke.sql" , __DIR__ ) );
