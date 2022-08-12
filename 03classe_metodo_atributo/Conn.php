@@ -2,10 +2,10 @@
 
 class Conn
 {
-    public $host = "db-mysql-testes.c5rwuxpdslhl.sa-east-1.rds.amazonaws.com";
+    public $host = "database-1.c5rwuxpdslhl.sa-east-1.rds.amazonaws.com";
     public $user = "admin"; //"root";
-    public $pass = "aletheia2006";
-    public $dbname = "db-mysql-testes";
+    public $pass = "testvla2022";
+    public $dbname = "testvla";
     public $port = 3306;
     public $connect = null;
 
