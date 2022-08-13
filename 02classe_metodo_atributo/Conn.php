@@ -2,30 +2,18 @@
 
 class Conn
 {
-    public $host;
-    public $user; //"root";
+    public $host = "database-1.c5rwuxpdslhl.sa-east-1.rds.amazonaws.com";
+    public $user = "admin"; //"root";
     public $pass;
     public $dbname;
-    public $port;
+    public $port = 3306;
     public $connect = null;
 
-    public function __construct(){
-
-        /*
-        Cole abaixo $hashOut
-        */
-        $hashOut = [
-            "host" => "database-1.c5rwuxpdslhl.sa-east-1.rds.amazonaws.com",
-            "user" => "admin",
-            "pass" => "",
-            "dbname" => "",
-            "port" => 3306
-        ];
-        
-        $this->host = $hashOut["host"];
-        $this->user = $hashOut["user"];
-        $this->pass = $hashOut["pass"];
-        $this->dbname = $hashOut["dbname"];
+    public function __construct( $user , $pass ){
+      
+        $this->user = $user;
+        $this->pass = $pass; 
+ 
     }
     public function conectar(){
         try{
