@@ -1,6 +1,6 @@
 <?php
 
-require './Conn.php';
+require '../00config/Conn.php';
 
 class Usuarios
 {
