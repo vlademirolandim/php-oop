@@ -4,18 +4,12 @@ class Conn
 {
     public $host = "database-1.c5rwuxpdslhl.sa-east-1.rds.amazonaws.com";
     public $user = "admin"; //"root";
-    public $pass;
-    public $dbname;
+    public $pass = "testvla2022";
+    public $dbname = "testvla";
     public $port = 3306;
     public $connect = null;
 
-    public function __construct( $user , $pass ){
-      
-        $this->user = $user;
-        $this->pass = $pass; 
- 
-    }
-    public function conectar(){
+     public function conectar(){
         try{
             //Conexao com a porta
             //$this->connect = new PDO("mysql:host=" . $this->host . ";port=" . $this->port . ";dbname=" . $this->dbname, $this->user, $this->pass);
